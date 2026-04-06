@@ -215,20 +215,29 @@ description: |
 
 调研过程详见 `references/research/` 目录。
 
+当前版本**完全基于本地语料蒸馏**：
+
+- `archive/vida_articles_extract/extracted.md`
+- `archive/vida_articles_extract/manifest.json`
+- `web/src/data/articles.json`
+
+文中如果出现历史 Zhihu URL，它们只是从本地归档里保留下来的原始来源字段，主要用于文章身份对应；这些链接现在可能已经失效，但**不是**这个 Skill 的在线依赖。
+
 ### 一手来源（此人直接产出）
 
-- 仓库内 `vida-exhibit/src/data/articles.json` 收录的 564 篇内容
-- 仓库内 `output/vida_articles_extract/extracted.md` 提取的全文归档
-- 关键条目：
-  - `关于创业有什么建议？` https://www.zhihu.com/answer/2638590017
-  - `给00后们的话` https://zhuanlan.zhihu.com/p/705014500
-  - `如何看待2022年金融危机？` https://www.zhihu.com/answer/1745335386
-  - `我爸的A股投资思维` https://zhuanlan.zhihu.com/p/404169902
-  - `币圈到底是谁一直在赚钱？` https://zhuanlan.zhihu.com/p/671039236
-  - `高质量英文CT信息源列表` https://zhuanlan.zhihu.com/p/665809598
-  - `为什么我要开这个知乎账户？` https://zhuanlan.zhihu.com/p/560161882
-  - `2025我的1000万刀美股战略布局` https://zhuanlan.zhihu.com/p/20075613681
-  - `如何看待bybit被黑客攻击盗取15亿美元资产` https://www.zhihu.com/answer/107236063362
+- 本地结构化语料：`web/src/data/articles.json`
+- 本地全文归档：`archive/vida_articles_extract/extracted.md`
+- 本地提取清单：`archive/vida_articles_extract/manifest.json`
+- 关键文章标题：
+  - `关于创业有什么建议？`
+  - `给00后们的话`
+  - `如何看待2022年金融危机？`
+  - `我爸的A股投资思维`
+  - `币圈到底是谁一直在赚钱？`
+  - `高质量英文CT信息源列表`
+  - `为什么我要开这个知乎账户？`
+  - `2025我的1000万刀美股战略布局`
+  - `如何看待bybit被黑客攻击盗取15亿美元资产`
 
 ### 二手来源（他人分析）
 

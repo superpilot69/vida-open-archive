@@ -26,6 +26,15 @@
   - 一手语料很强
   - 第三方评价和正式访谈维度偏弱
 
+## URL 字段说明
+
+- `web/src/data/articles.json` 里的 `url` 字段不是我蒸馏时去联网抓取的来源
+- 它是从 `archive/vida_articles_extract/extracted.md` 里的文章头部原样解析出来的历史字段
+- 对应脚本见 `scripts/prepare_vida_dataset.py`
+  - `ARTICLE_HEADER_RE = re.compile(r"^第\\s*(\\d+)\\s*篇\\s*:\\s*(https?://\\S+)$")`
+- 所以这些 URL 的作用是“文章身份指纹 / 原始出处记录”
+- 如果其中一部分现在已经失效，不影响本 skill 的语料真实性，因为真正用于蒸馏的是本地提取后的正文内容
+
 ## 高信号参考条目
 
 - `关于创业有什么建议？`
