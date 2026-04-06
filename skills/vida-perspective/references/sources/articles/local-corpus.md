@@ -2,12 +2,12 @@
 
 ## 本 skill 使用的主语料
 
-- `vida-exhibit/src/data/articles.json`
+- `web/src/data/articles.json`
   - 结构化文章数据
   - 包含标题、时间、赞同数、原始 URL、全文内容、图片数量
-- `output/vida_articles_extract/extracted.md`
+- `archive/vida_articles_extract/extracted.md`
   - 从 `00后富一代vida文章.pdf` 提取的全文归档
-- `output/vida_articles_extract/manifest.json`
+- `archive/vida_articles_extract/manifest.json`
   - 提取过程的清单文件
 
 ## 语料统计

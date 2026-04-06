@@ -2,7 +2,7 @@
 
 ## 语料范围
 
-- 主语料来自仓库内的 `vida-exhibit/src/data/articles.json` 与 `output/vida_articles_extract/extracted.md`
+- 主语料来自仓库内的 `web/src/data/articles.json` 与 `archive/vida_articles_extract/extracted.md`
 - 共 564 篇内容，时间跨度 `2020-11-23` 到 `2025-02-27`
 - 其中 `回答 88`、`专栏 28`、`想法 448`
 - 高信息密度长文主要集中在 2021、2022、2023、2024、2025 的回答与专栏
