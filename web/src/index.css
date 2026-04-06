@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 36% 94%;
+    --foreground: 22 25% 16%;
+    --card: 40 43% 97%;
+    --card-foreground: 22 25% 16%;
+    --popover: 40 43% 97%;
+    --popover-foreground: 22 25% 16%;
+    --primary: 24 44% 24%;
+    --primary-foreground: 40 43% 97%;
+    --secondary: 35 28% 88%;
+    --secondary-foreground: 22 22% 18%;
+    --muted: 36 24% 86%;
+    --muted-foreground: 24 13% 40%;
+    --accent: 190 16% 80%;
+    --accent-foreground: 22 22% 18%;
+    --destructive: 4 72% 48%;
+    --destructive-foreground: 40 43% 97%;
+    --border: 32 22% 78%;
+    --input: 32 22% 78%;
+    --ring: 28 40% 30%;
+    --radius: 1.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased;
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua',
+      'Songti SC', 'STSong', serif;
+    overflow-x: hidden;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)),
+      radial-gradient(circle at 1px 1px, rgba(92, 67, 43, 0.05) 1px, transparent 0);
+    background-size: auto, 24px 24px;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  button {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  img {
+    display: block;
+  }
+
+  ::selection {
+    background: rgba(117, 88, 54, 0.2);
+  }
+}
+
+@layer components {
+  .paper-panel {
+    @apply rounded-[30px] border border-[rgba(96,70,42,0.12)] bg-[rgba(255,252,246,0.82)] shadow-[0_18px_55px_rgba(58,36,18,0.08)] backdrop-blur;
+  }
+
+  .hero-stage {
+    background:
+      linear-gradient(180deg, rgba(255, 252, 246, 0.94), rgba(251, 245, 235, 0.88)),
+      radial-gradient(circle at top left, rgba(181, 141, 90, 0.16), transparent 30%),
+      radial-gradient(circle at top right, rgba(115, 142, 152, 0.14), transparent 24%);
+  }
+
+  .hero-stage__content {
+    width: min(100%, 100%);
+  }
+
+  .archive-title {
+    font-size: clamp(2.35rem, 7.4vw, 3.4rem);
+  }
+
+  .reading-surface {
+    @apply rounded-[34px] border border-[rgba(96,70,42,0.12)] bg-[linear-gradient(180deg,rgba(255,253,249,0.96),rgba(252,247,238,0.96))] shadow-[0_22px_70px_rgba(58,36,18,0.1)];
+  }
+
+  .article-prose {
+    color: hsl(var(--foreground));
+  }
+
+  .article-card {
+    min-width: 0;
+  }
+
+  .article-card__title,
+  .article-card__preview {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .article-prose > p {
+    margin: 1.15rem 0 0;
+    font-size: 1.08rem;
+    line-height: 2.04;
+    letter-spacing: 0.01em;
+  }
+
+  .article-prose > p:first-child {
+    margin-top: 0;
+  }
+
+  .article-figure {
+    margin: 1.75rem auto;
+    max-width: 42rem;
+  }
+
+  .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid rgba(96, 70, 42, 0.12);
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 16px 38px rgba(58, 36, 18, 0.07);
+  }
+}
+
+@media (max-width: 640px) {
+  .paper-panel {
+    border-radius: 24px;
+    box-shadow: 0 12px 38px rgba(58, 36, 18, 0.07);
+  }
+
+  .archive-main {
+    gap: 1.15rem;
+  }
+
+  .archive-hero__top {
+    gap: 0.85rem;
+  }
+
+  .archive-stats {
+    gap: 0.5rem;
+  }
+
+  .archive-controls {
+    gap: 0.85rem;
+  }
+
+  .archive-sort {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .archive-sort__count {
+    width: 100%;
+    padding-left: 0.2rem;
+  }
+
+  .article-card {
+    border-radius: 22px;
+  }
+
+  .article-card__title {
+    letter-spacing: 0;
+  }
+
+  .reading-surface {
+    border-radius: 28px;
+    box-shadow: 0 16px 48px rgba(58, 36, 18, 0.08);
+  }
+
+  .article-prose > p {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.92;
+  }
+
+  .article-figure {
+    margin: 1.2rem auto;
+  }
+}
