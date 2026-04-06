@@ -37,7 +37,7 @@ An open repository that bundles three things together:
 For Codex / skills-based environments, install the skill from this repo path:
 
 ```bash
-npx skills add Noahuto/vida-open-archive --path skills/vida-perspective
+npx skills add superpilot69/vida-open-archive --path skills/vida-perspective
 ```
 
 After installation, restart your agent session and trigger it with prompts like:
@@ -82,4 +82,3 @@ The website dataset lives at:
 
 - Code and skill materials in this repository are released under the MIT License.
 - Archived article text and media are preserved with original source URLs for research and archival purposes; see `CONTENT_NOTICE.md`.
-
